@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<body>
+    {% include 'navbar.html' %}
+
+    <section class="contact-clean" style="padding-left:120px; padding-top:110px; padding-bottom:224px">
+            <div class="dropdown"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button">Remove Employee </button>
+                <div class="dropdown-menu">
+                    {% for emp in emps %}
+                    <a class="dropdown-item" href="/removeemp/{{emp.id}}">{{emp.first_name}} {{emp.last_name}}</a>
+                    {% endfor %}
+                </div>
+            </div>
+    </section>
+
+
+
+    {% include 'footer.html' %}
+</body>
+{% endblock %}

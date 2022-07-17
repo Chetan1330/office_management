@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<body>
+    {% include 'navbar.html' %}
+    <main class="page landing-page">
+        <section class="clean-block clean-hero" style="background-image:url(&quot;{% static 'background.jpg' %}&quot;);color:rgba(9, 162, 255, 0.85);">
+            <div class="text">
+                <h2>Welcome to Office Management Portal</h2>
+                <p>Web Portal Made With Django</p><button class="btn btn-outline-light btn-lg" type="button">Learn More</button>
+            </div>
+        </section>
+    </main>
+    {% include 'footer.html' %}
+</body>
+{% endblock %}

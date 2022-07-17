@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<body>
+    {% include 'navbar.html' %}
+
+    <section class="contact-clean" style="padding-top:120px; padding-bottom:20px">
+        <form method="post" action="/filteremp">
+          {% csrf_token %}
+            <h2 class="text-center">Register</h2>
+            <div class="mb-3"><input class="form-control" type="text" name="name" placeholder="First Name/Last Name" value="{{ first_name }}"></div>
+            <div class="mb-3"><input class="form-control" type="text" name="dept" placeholder="Department" value="{{ dept }}"></div>
+            <div class="mb-3"><input class="form-control" type="text" name="role" placeholder="Role" value="{{ role }}"></div>
+            <div class="mb-3"></div>
+            <div class="mb-3"><button class="btn btn-primary" type="submit">send </button></div>
+        </form>
+    </section>
+
+    {% include 'footer.html' %}
+</body>
+{% endblock %}
